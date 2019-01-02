@@ -5,6 +5,7 @@ import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.view.ViewGroup
 import android.widget.ScrollView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -23,6 +24,7 @@ class MainActivity : AppCompatActivity() {
 
     private val addClickListener: View.OnClickListener = View.OnClickListener {
         logAction("clicked add fragment")
+        logAction("container have ${frag_container.childCount} views")
         logPreviousFragment()
         val prevFrag = supportFragmentManager.findFragmentById(FRAGMENT_CONTAINER)
         if (prevFrag != null) {

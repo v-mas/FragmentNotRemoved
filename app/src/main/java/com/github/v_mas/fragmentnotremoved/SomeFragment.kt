@@ -37,7 +37,7 @@ class SomeFragment : Fragment() {
         log("create")
     }
 
-    override fun onAttach(context: Context?) {
+    override fun onAttach(context: Context) {
         super.onAttach(context)
         activity = context as? MainActivity
         log("attach")
